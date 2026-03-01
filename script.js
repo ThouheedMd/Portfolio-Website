@@ -1,7 +1,3 @@
-// script.js
-// All interactive behaviors: theme toggle, typing effect, cursor glow, tilt, scroll reveal, form validation, mobile menu, project filter
-// Sections are clearly marked for easy customization and maintenance
-
 /* =========================
    UTILITIES
    ========================= */
@@ -165,8 +161,12 @@ if(tiltCard){
 /* =========================
    SKILL BARS ANIMATION
    ========================= */
-function animateSkillBars(){
+function animateBars(){
   $$('.skill-fill').forEach(el => {
+    const value = el.getAttribute('data-fill') || '0';
+    el.style.width = value + '%';
+  });
+  $$('.edu-fill').forEach(el => {
     const value = el.getAttribute('data-fill') || '0';
     el.style.width = value + '%';
   });
@@ -275,6 +275,39 @@ contactForm?.addEventListener('submit', (e) => {
     contactForm.reset();
   }, 900);
 });
+
+
+/* =========================
+   CERTIFICATES:
+   #CUSTOMIZE_CERTS
+   ========================= */
+function initCertificateCards(){
+  const certCards = $$('.cert-card.project-like');
+  certCards.forEach(card => {
+    const link = card.getAttribute('data-cert-link') || null;
+    if(!link) return;
+
+    // Make the card keyboard-focusable for accessibility
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'link');
+    card.setAttribute('aria-label', `Open certificate: ${card.querySelector('h4')?.textContent || 'certificate'}`);
+
+    // Click handler opens the link in a new tab unless a real anchor was clicked
+    card.addEventListener('click', (e) => {
+      if(e.target.closest && e.target.closest('a')) return;
+      window.open(link, '_blank', 'noopener');
+    });
+
+    // Keyboard support: Enter or Space opens the link
+    card.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        window.open(link, '_blank', 'noopener');
+      }
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', initCertificateCards);
 
 /* =========================
    STICKY NAVBAR BLUR ON SCROLL

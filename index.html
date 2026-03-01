@@ -1,0 +1,322 @@
+<!--
+  index.html
+  Fully responsive futuristic portfolio template
+  Edit content in the #CUSTOMIZE_ sections below
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MOHAMMED THOUHEED — Portfolio</title>
+
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Meta for theme color -->
+  <meta name="theme-color" content="#0f1724" />
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#home">
+        <!-- #CUSTOMIZE_NAME: Change displayed name -->
+        <span class="brand-futuristic">MOHAMMED THOUHEED</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+        <a href="#certs" class="nav-link">CERTIFICATIONS</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Glow cursor follower -->
+  <div id="cursorGlow" class="cursor-glow"></div>
+
+  <!-- Smooth scroll indicator -->
+  <a href="#about" class="scroll-indicator" aria-hidden="true">
+    <span class="mouse">
+      <span class="wheel"></span>
+    </span>
+    <span class="scroll-text">Scroll</span>
+  </a>
+
+  <!-- HERO / HOME -->
+  <main>
+    <section id="home" class="hero">
+      <!-- Animated background layers -->
+      <div class="bg-gradient"></div>
+      <div class="bg-particles" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <!-- Typing effect -->
+          <h1 class="hero-title">
+            <!-- #CUSTOMIZE_NAME -->
+            <span class="name-future">MOHAMMED THOUHEED</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            <span id="typedText" class="typed"></span>
+            <span class="cursor">|</span>
+          </p>
+
+          <p class="hero-role">AZURE DEVOPS ENGINEER</p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- Futuristic card with glassmorphism -->
+          <div class="hero-card glass">
+            <img src="https://via.placeholder.com/320x320.png?text=Profile" alt="Profile" class="profile-img" />
+            <div class="hero-card-info">
+              <h3><!-- #CUSTOMIZE_NAME -->Mohammed Thouheed</h3>
+              <p>Building immersive interfaces with performance and polish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container">
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-left">
+          <!-- Profile image with 3D tilt -->
+          <div class="tilt-card" id="tiltCard">
+            <img src="https://via.placeholder.com/420x420.png?text=Your+Photo" alt="Profile photo" class="about-photo" />
+          </div>
+        </div>
+
+        <div class="about-right">
+          <!-- #CUSTOMIZE_BIO -->
+          <p class="bio">
+            Hi, I'm <strong>Mohammed Thouheed</strong>.
+            I am an aspiring Azure DevOps Engineer passionate about building secure, scalable, and automated cloud solutions. With hands-on experience in Azure Resource Manager, Terraform, Docker, and CI/CD pipelines, I enjoy turning complex infrastructure challenges into streamlined, reliable workflows.
+            My academic projects include developing a full-stack Employee Management Application with automated deployments on Azure, containerizing applications with Docker, and hosting my own portfolio website using Azure Static Web Apps integrated with GitHub Actions.
+            I thrive on learning, problem-solving, and applying DevOps best practices to real-world scenarios. My goal is to contribute to innovative teams where I can grow while delivering automation, reliability, and efficiency in cloud environments.
+          </p>
+
+          <!-- Skill bars -->
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-head">
+                <span>HTML & CSS</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-fill="95"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-head">
+                <span>JavaScript</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-fill="90"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-head">
+                <span>UI / UX</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-fill="88"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glass cards -->
+          <div class="cards">
+            <div class="card glass reveal">
+              <h4>Experience</h4>
+              <p>Fresher with hands on knowledge on azure DevOps, CI/CD pipelines, and cloud infrastructure.
+              </p>
+            </div>
+            <div class="card glass reveal">
+              <h4>Tools</h4>
+              <p>Git;GitHub;Gitlab</p>
+            </div>
+            <div class="card glass reveal">
+              <h4>Availability</h4>
+              <p>Open to freelance & remote roles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container">
+      <h2 class="section-title">Projects</h2>
+
+      <!-- #CUSTOMIZE_PROJECTS: Edit project items below -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ui">UI</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- Project Card 1 -->
+        <article class="project-card glass reveal" data-category="web">
+          <div class="project-media">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+1" alt="Project 1" />
+          </div>
+          <div class="project-body">
+            <h3>Futuristic Dashboard</h3>
+            <p>Responsive admin dashboard with realtime charts and neon UI.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card glass reveal" data-category="ui">
+          <div class="project-media">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+2" alt="Project 2" />
+          </div>
+          <div class="project-body">
+            <h3>Neon Landing</h3>
+            <p>Marketing landing with micro-interactions and animated hero.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card glass reveal" data-category="tools">
+          <div class="project-media">
+            <img src="https://via.placeholder.com/600x360.png?text=Project+3" alt="Project 3" />
+          </div>
+          <div class="project-body">
+            <h3>Design Tokens CLI</h3>
+            <p>Small tool to export design tokens to multiple formats.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="certs container">
+      <h2 class="section-title">Certifications</h2>
+
+      <div class="certs-timeline">
+        <!-- #CUSTOMIZE_CERTS: Edit certifications -->
+        <div class="cert-card reveal">
+          <div class="cert-year">2025</div>
+          <div class="cert-body glass">
+            <h4>HTML5, CSS3 & JAVASCRIPT</h4>
+            <p class="issuer">Issued by Udemy</p>
+            <img src="/asserts/certifications/udemy.jpg" alt="Udemy Certification">
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-year">2025</div>
+          <div class="cert-body glass">
+            <h4>Python for Beginners</h4>
+            <p class="issuer">Issued by Sololearn</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-year">2025</div>
+          <div class="cert-body glass">
+            <h4>Python for Intermediate</h4>
+            <p class="issuer">Issued by Sololearn</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p>Want to collaborate or hire me? Send a message and I'll get back within 48 hours.</p>
+
+          <!-- Social links -->
+          <div class="socials">
+            <!-- #CUSTOMIZE_SOCIAL_LINKS: Replace hrefs with your profiles -->
+            <a class="social" href="https://github.com/ThouheedMd" target="_blank" aria-label="GitHub">GitHub</a>
+            <a class="social" href="https://www.linkedin.com/in/thouheed-mohammed" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a class="social" href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn primary">Send Message</button>
+            </div>
+
+            <div id="formSuccess" class="form-success" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <p>© <span id="footerYear"></span> <!-- #CUSTOMIZE_NAME -->Mohammed Thouheed. All rights reserved.</p>
+  </footer>
+
+  <!-- Main script -->
+  <script src="/script.js"></script>
+</body>
+</html>

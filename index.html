@@ -1,8 +1,3 @@
-<!--
-  index.html
-  Fully responsive futuristic portfolio template
-  Edit content in the #CUSTOMIZE_ sections below
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +26,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="#home" class="nav-link">HOME</a>
         <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#projects" class="nav-link">PROJECTS</a>
         <a href="#certs" class="nav-link">CERTIFICATIONS</a>
         <a href="#contact" class="nav-link">CONTACT</a>
@@ -170,6 +166,53 @@
       </div>
     </section>
 
+    <!-- EDUCATION -->
+    <!-- #CUSTOMIZE_EDUCATION: Edit the education items and percentages below -->
+    <section id="education" class="education container">
+      <h2 class="section-title">Education</h2>
+
+      <div class="education-grid">
+        <!-- 10th Grade -->
+        <div class="edu-card glass reveal">
+          <div class="edu-head">
+            <h4>10th Grade</h4>
+            <span class="edu-year">Year: 2016</span>
+          </div>
+          <p class="edu-institution">Your School Name</p>
+          <div class="edu-percent">Percentage: <strong>92%</strong></div>
+          <div class="edu-bar">
+            <div class="edu-fill" data-fill="92"></div>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="edu-card glass reveal">
+          <div class="edu-head">
+            <h4>Intermediate</h4>
+            <span class="edu-year">Year: 2018</span>
+          </div>
+          <p class="edu-institution">Your College Name</p>
+          <div class="edu-percent">Percentage: <strong>88%</strong></div>
+          <div class="edu-bar">
+            <div class="edu-fill" data-fill="88"></div>
+          </div>
+        </div>
+
+        <!-- BTech -->
+        <div class="edu-card glass reveal">
+          <div class="edu-head">
+            <h4>BTech</h4>
+            <span class="edu-year">Year: 2023</span>
+          </div>
+          <p class="edu-institution">Your University Name</p>
+          <div class="edu-percent">Percentage: <strong>78%</strong></div>
+          <div class="edu-bar">
+            <div class="edu-fill" data-fill="78"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects" class="projects container">
       <h2 class="section-title">Projects</h2>
@@ -234,32 +277,51 @@
     <section id="certs" class="certs container">
       <h2 class="section-title">Certifications</h2>
 
-      <div class="certs-timeline">
-        <!-- #CUSTOMIZE_CERTS: Edit certifications -->
-        <div class="cert-card reveal">
-          <div class="cert-year">2025</div>
-          <div class="cert-body glass">
-            <h4>HTML5, CSS3 & JAVASCRIPT</h4>
-            <p class="issuer">Issued by Udemy</p>
-            <img src="/asserts/certifications/udemy.jpg" alt="Udemy Certification">
+      <div class="cert-grid" id="certGrid">
+        <!-- Certificate Card 1 -->
+        <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-frontend-performance">
+          <a class="cert-thumb-link" href="https://example.com/certificate-frontend-performance" target="_blank" rel="noopener">
+            <img class="cert-thumb-small" src="https://via.placeholder.com/420x260.png?text=Cert+1" alt="Frontend Performance Certificate" />
+          </a>
+          <div class="cert-body-compact">
+            <h4>Frontend Performance</h4>
+            <p class="issuer">Web Academy • 2024</p>
+            <div class="cert-actions">
+              <a class="btn small" href="https://example.com/certificate-frontend-performance" target="_blank" rel="noopener">View</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Share</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="cert-card reveal">
-          <div class="cert-year">2025</div>
-          <div class="cert-body glass">
-            <h4>Python for Beginners</h4>
-            <p class="issuer">Issued by Sololearn</p>
+        <!-- Certificate Card 2 -->
+        <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-advanced-js">
+          <a class="cert-thumb-link" href="https://example.com/certificate-advanced-js" target="_blank" rel="noopener">
+            <img class="cert-thumb-small" src="https://via.placeholder.com/420x260.png?text=Cert+2" alt="Advanced JavaScript Certificate" />
+          </a>
+          <div class="cert-body-compact">
+            <h4>Advanced JavaScript</h4>
+            <p class="issuer">JS Institute • 2023</p>
+            <div class="cert-actions">
+              <a class="btn small" href="https://example.com/certificate-advanced-js" target="_blank" rel="noopener">View</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Share</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="cert-card reveal">
-          <div class="cert-year">2025</div>
-          <div class="cert-body glass">
-            <h4>Python for Intermediate</h4>
-            <p class="issuer">Issued by Sololearn</p>
+        <!-- Certificate Card 3 -->
+        <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-ui-design">
+          <a class="cert-thumb-link" href="https://example.com/certificate-ui-design" target="_blank" rel="noopener">
+            <img class="cert-thumb-small" src="https://via.placeholder.com/420x260.png?text=Cert+3" alt="UI Design Essentials Certificate" />
+          </a>
+          <div class="cert-body-compact">
+            <h4>UI Design Essentials</h4>
+            <p class="issuer">Design School • 2022</p>
+            <div class="cert-actions">
+              <a class="btn small" href="https://example.com/certificate-ui-design" target="_blank" rel="noopener">View</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Share</a>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 

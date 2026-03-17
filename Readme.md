@@ -9,13 +9,13 @@ Designed for easy customization and deployment
 -----
 <!-- Repository Structure -->
 Repository Structure
-/-index.html
-/-style.css
-/-script.js
-/-readme.md
-/-asserts
-    /-certifications
-    /-projects
+|-index.html
+|-style.css
+|-script.js
+|-readme.md
+|-asserts
+    |-certifications
+    |-projects
 
 -----
 <!-- Features -->

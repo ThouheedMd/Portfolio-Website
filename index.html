@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MOHAMMED THOUHEED — Portfolio</title>
 
-  <!-- Google Fonts (optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style.css" />
@@ -15,6 +15,14 @@
   <meta name="theme-color" content="#0f1724" />
 </head>
 <body>
+  <!-- Page Loader -->
+  <div id="pageLoader">
+    <div class="loader-logo">MT</div>
+    <div class="loader-spinner"></div>
+    <div class="loader-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
   <!-- Sticky Navbar -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
@@ -57,9 +65,15 @@
       <!-- Animated background layers -->
       <div class="bg-gradient"></div>
       <div class="bg-particles" aria-hidden="true"></div>
+      <div class="bg-scanlines" aria-hidden="true"></div>
 
       <div class="hero-inner container">
         <div class="hero-left">
+          <!-- Availability badge -->
+          <div class="hero-tag">
+            <span class="tag-dot"></span>
+            AVAILABLE FOR HIRE
+          </div>
           <!-- Typing effect -->
           <h1 class="hero-title">
             <!-- #CUSTOMIZE_NAME -->
@@ -84,8 +98,9 @@
           <div class="hero-card glass">
             <img src="/asserts/profile.png" alt="Profile" class="profile-img" />
             <div class="hero-card-info">
-              <h3><!-- #CUSTOMIZE_NAME -->Mohammed Thouheed</h3>
-              <p>Building immersive interfaces with performance and polish.</p>
+              <h3>Mohammed Thouheed</h3>
+              <p>Azure DevOps & Cloud Engineer.</p>
+              <div class="status-badge">Open to work</div>
             </div>
           </div>
         </div>
@@ -97,14 +112,18 @@
       <h2 class="section-title">About Me</h2>
 
       <div class="about-grid">
-        <div class="about-left">
+        <div class="about-left reveal-left">
           <!-- Profile image with 3D tilt -->
           <div class="tilt-card" id="tiltCard">
             <img src="/asserts/profile.png" alt="Profile photo" class="about-photo" />
+            <div class="tilt-card-overlay">
+              <span class="tilt-card-overlay-name">MOHAMMED THOUHEED</span>
+              <span class="tilt-card-overlay-role">Azure DevOps Engineer</span>
+            </div>
           </div>
         </div>
 
-        <div class="about-right">
+        <div class="about-right reveal-right">
           <!-- #CUSTOMIZE_BIO -->
           <p class="bio">
             Hi, I'm <strong>Mohammed Thouheed</strong>.
@@ -356,7 +375,6 @@
 
           <!-- Social links -->
           <div class="socials">
-            <!-- #CUSTOMIZE_SOCIAL_LINKS: Replace hrefs with your profiles -->
             <a class="social" href="https://github.com/ThouheedMd" target="_blank" aria-label="GitHub">GitHub</a>
             <a class="social" href="https://www.linkedin.com/in/thouheed-mohammed" target="_blank" aria-label="LinkedIn">LinkedIn</a>
             <a class="social" href="https://thouheedmd1234@gmail.com" target="_blank" aria-label="Gmail">Gmail</a>

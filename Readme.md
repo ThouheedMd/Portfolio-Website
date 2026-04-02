@@ -28,3 +28,4 @@ Features
 -Dark/Light theme
 -Functional email contact
 -Fully responsive
+-Mobile responsive

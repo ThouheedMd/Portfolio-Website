@@ -29,4 +29,3 @@ Features
 -Functional email contact
 -Fully responsive
 -Mobile responsive
-# Portfolio_DevOps_CI-CD

@@ -16,6 +16,15 @@
 
   <!-- Meta for theme color -->
   <meta name="theme-color" content="#0f1724" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // #CUSTOMIZE: Replace with your EmailJS Public Key
+    (function () {
+      emailjs.init({ publicKey: "nT7Spyh1VlMB8WQhF" });
+    })();
+  </script>
 </head>
 
 <body>
@@ -301,6 +310,15 @@
             </div>
           </div>
         </article>
+
+        <!-- Add more internship cards below as needed -->
+        <!-- Example placeholder for second internship -->
+        <!--
+        <article class="internship-card glass reveal">
+          ...
+        </article>
+        -->
+
       </div>
     </section>
 
@@ -396,18 +414,18 @@
       <div class="cert-grid" id="certGrid">
         <!-- Certificate Card 1 -->
         <article class="cert-card project-like glass reveal"
-          data-cert-link="https://learn.kodekloud.com/user/certificate/12421fab-4c63-4395-b968-2e128e604e49">
-          <a class="cert-thumb-link"
-            href="https://learn.kodekloud.com/user/certificate/12421fab-4c63-4395-b968-2e128e604e49" target="_blank"
-            rel="noopener">
-            <img class="cert-thumb-small zoom-img" src="/asserts/certifications/Docker_KodeKloud.jpg" alt="Docker"
-              data-full="/asserts/certifications/Docker_KodeKloud.jpg" data-title="Docker - kodekloud" />
+          data-cert-link="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/">
+          <a class="cert-thumb-link" href="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/"
+            target="_blank" rel="noopener">
+            <img class="cert-thumb-small zoom-img" src="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg"
+              alt="HTML5, CSS3 & JavaScript" data-full="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg"
+              data-title="HTML5, CSS3 &amp; JavaScript — Udemy" />
           </a>
           <div class="cert-body-compact">
-            <h4>Docker</h4>
-            <p class="issuer">KodeKloud • 2026</p>
+            <h4>HTML5, CSS3 & JavaScript</h4>
+            <p class="issuer">Udemy • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/Docker_KodeKloud.jpg" target="_blank"
+              <a class="btn small" href="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg" target="_blank"
                 rel="noopener">View</a>
             </div>
           </div>
@@ -514,14 +532,19 @@
           <form id="contactForm" class="contact-form" novalidate>
             <div class="form-row">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
+              <input id="name" name="from_name" type="text" placeholder="Your name" required />
               <small class="error" id="nameError"></small>
             </div>
 
             <div class="form-row">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+              <input id="email" name="reply_to" type="email" placeholder="you@domain.com" required />
               <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="What's this about?" />
             </div>
 
             <div class="form-row">
@@ -532,10 +555,14 @@
             </div>
 
             <div class="form-row">
-              <button type="submit" class="btn primary">Send Message</button>
+              <button type="submit" class="btn primary" id="submitBtn">
+                <span id="submitText">Send Message</span>
+                <span id="submitSpinner" class="btn-spinner" style="display:none"></span>
+              </button>
             </div>
 
             <div id="formSuccess" class="form-success" role="status" aria-live="polite"></div>
+            <div id="formError" class="form-error" role="alert" aria-live="polite"></div>
           </form>
         </div>
       </div>

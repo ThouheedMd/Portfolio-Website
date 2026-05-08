@@ -6,7 +6,9 @@
   <title>MOHAMMED THOUHEED — Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style.css" />
@@ -14,6 +16,7 @@
   <!-- Meta for theme color -->
   <meta name="theme-color" content="#0f1724" />
 </head>
+
 <body>
   <!-- Page Loader -->
   <div id="pageLoader">
@@ -35,6 +38,7 @@
         <a href="#home" class="nav-link">HOME</a>
         <a href="#about" class="nav-link">ABOUT</a>
         <a href="#education" class="nav-link">EDUCATION</a>
+        <a href="#internships" class="nav-link">INTERNSHIPS</a>
         <a href="#projects" class="nav-link">PROJECTS</a>
         <a href="#certs" class="nav-link">CERTIFICATIONS</a>
         <a href="#contact" class="nav-link">CONTACT</a>
@@ -89,6 +93,7 @@
 
           <div class="hero-cta">
             <a href="#projects" class="btn primary">View Projects</a>
+            <a href="/asserts/Mohammed_Thouheed_Resume.pdf" class="btn ghost" download>Download Resume</a>
             <a href="#contact" class="btn ghost">Contact Me</a>
           </div>
         </div>
@@ -127,40 +132,56 @@
           <!-- #CUSTOMIZE_BIO -->
           <p class="bio">
             Hi, I'm <strong>Mohammed Thouheed</strong>.
-            I am an aspiring Azure DevOps Engineer passionate about building secure, scalable, and automated cloud solutions. With hands-on experience in Azure Resource Manager, Terraform, Docker, and CI/CD pipelines, I enjoy turning complex infrastructure challenges into streamlined, reliable workflows.
-            My academic projects include developing a full-stack Employee Management Application with automated deployments on Azure, containerizing applications with Docker, and hosting my own portfolio website using Azure Static Web Apps integrated with GitHub Actions.
-            I thrive on learning, problem-solving, and applying DevOps best practices to real-world scenarios. My goal is to contribute to innovative teams where I can grow while delivering automation, reliability, and efficiency in cloud environments.
+            I am an aspiring Azure DevOps Engineer passionate about building secure, scalable, and automated cloud
+            solutions. With hands-on experience in Azure Resource Manager, Terraform, Docker, and CI/CD pipelines, I
+            enjoy turning complex infrastructure challenges into streamlined, reliable workflows.
+            My academic projects include developing a full-stack Employee Management Application with automated
+            deployments on Azure, containerizing applications with Docker, and hosting my own portfolio website using
+            Azure Static Web Apps integrated with GitHub Actions.
+            I thrive on learning, problem-solving, and applying DevOps best practices to real-world scenarios. My goal
+            is to contribute to innovative teams where I can grow while delivering automation, reliability, and
+            efficiency in cloud environments.
           </p>
 
           <!-- Skill bars -->
           <div class="skills">
             <div class="skill">
               <div class="skill-head">
-                <span>HTML & CSS</span>
-                <span class="skill-percent">95%</span>
+                <span>Azure DevOps & CI/CD</span>
+                <span class="skill-percent">92%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-fill="95"></div>
+                <div class="skill-fill" data-fill="92"></div>
               </div>
             </div>
 
             <div class="skill">
               <div class="skill-head">
-                <span>JavaScript</span>
-                <span class="skill-percent">90%</span>
+                <span>Docker & Kubernetes</span>
+                <span class="skill-percent">85%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-fill="90"></div>
+                <div class="skill-fill" data-fill="85"></div>
               </div>
             </div>
 
             <div class="skill">
               <div class="skill-head">
-                <span>UI / UX</span>
-                <span class="skill-percent">88%</span>
+                <span>Terraform & IaC</span>
+                <span class="skill-percent">80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-fill="88"></div>
+                <div class="skill-fill" data-fill="80"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-head">
+                <span>Python & Bash Scripting</span>
+                <span class="skill-percent">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-fill="78"></div>
               </div>
             </div>
           </div>
@@ -169,16 +190,16 @@
           <div class="cards">
             <div class="card glass reveal">
               <h4>Experience</h4>
-              <p>Fresher with hands on knowledge on Azure DevOps, CI/CD pipelines, and Cloud infrastructure.
-              </p>
+              <p>Fresher with hands-on knowledge in Azure DevOps, CI/CD pipelines, Docker, Kubernetes & Cloud
+                infrastructure.</p>
             </div>
             <div class="card glass reveal">
-              <h4>Tools</h4>
-              <p>Git;GitHub;Gitlab;</p>
+              <h4>DevOps Stack</h4>
+              <p>Azure · Docker · Kubernetes · Terraform · Git · GitHub · GitLab · Linux · Bash</p>
             </div>
             <div class="card glass reveal">
               <h4>Availability</h4>
-              <p>Open to work, freelance & also for remote roles.</p>
+              <p>Open to work, internships, freelance & remote DevOps/Cloud roles.</p>
             </div>
           </div>
         </div>
@@ -231,6 +252,67 @@
       </div>
     </section>
 
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="internships container">
+      <h2 class="section-title">Internships</h2>
+
+      <div class="internship-grid">
+
+        <!-- Internship Card 1 -->
+        <article class="internship-card glass reveal">
+          <div class="intern-header">
+            <div class="intern-company-logo">
+              <span class="intern-logo-text">DevOps</span>
+            </div>
+            <div class="intern-meta">
+              <h3 class="intern-role">Azure DevOps Intern</h3>
+              <p class="intern-company"><!-- #CUSTOMIZE: Add company name --> Your Company Name</p>
+              <span class="intern-duration"><!-- #CUSTOMIZE: Add duration --> Jan 2025 – Apr 2025</span>
+            </div>
+            <span class="intern-badge">Completed</span>
+          </div>
+
+          <p class="intern-desc">
+            <!-- #CUSTOMIZE: Add internship description -->
+            Worked on CI/CD pipeline automation using Azure DevOps and Azure Pipelines. Containerized applications with
+            Docker, implemented Infrastructure as Code with Terraform, and contributed to cloud infrastructure on
+            Microsoft Azure.
+          </p>
+
+          <div class="intern-tags">
+            <span class="tech-tag">Azure DevOps</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">Linux</span>
+          </div>
+
+          <!-- Completion Certificate -->
+          <div class="intern-cert-section">
+            <p class="intern-cert-label">📄 Completion Certificate</p>
+            <div class="intern-cert-thumb-wrap">
+              <img class="intern-cert-thumb zoom-img" src="/asserts/certifications/internship-completion.jpg"
+                alt="Internship Completion Certificate" data-full="/asserts/certifications/internship-completion.jpg"
+                data-title="Azure DevOps Internship — Completion Certificate" />
+              <div class="intern-cert-overlay">
+                <span>🔍 Click to Enlarge</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- IMAGE LIGHTBOX MODAL -->
+    <div id="imgModal" class="img-modal" role="dialog" aria-modal="true" aria-label="Certificate image viewer">
+      <div class="img-modal-backdrop"></div>
+      <div class="img-modal-inner">
+        <button class="img-modal-close" id="imgModalClose" aria-label="Close">&times;</button>
+        <p class="img-modal-title" id="imgModalTitle"></p>
+        <img class="img-modal-img" id="imgModalImg" src="" alt="" />
+      </div>
+    </div>
+
     <!-- PROJECTS -->
     <section id="projects" class="projects container">
       <h2 class="section-title">Projects</h2>
@@ -247,13 +329,14 @@
         <!-- Project Card 1 -->
         <article class="project-card glass reveal" data-category="python">
           <div class="project-media">
-            <img src="/asserts/projects/Dockerized Project.png" alt="Project 1" />
+            <img src="/asserts/projects/Dockerized_Project.png" alt="Project 1" />
           </div>
           <div class="project-body">
             <h3>Dockerized T-Shirts E-commerce Website</h3>
             <p>Technologies used: Docker, Nginx, Azure DevOps, GitHub, HTML, CSS, JavaScript.</p>
             <div class="project-actions">
-              <a class="btn small ghost" href="https://github.com/ThouheedMd/dockerized-website" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn small ghost" href="https://github.com/ThouheedMd/dockerized-website" target="_blank"
+                rel="noopener">GitHub</a>
             </div>
           </div>
         </article>
@@ -261,13 +344,15 @@
         <!-- Project Card 2 -->
         <article class="project-card glass reveal" data-category="python">
           <div class="project-media">
-            <img src="/asserts/projects/Heart Disease Prediction.png" alt="Project 2" />
+            <img src="/asserts/projects/Heart_Disease_Prediction.png" alt="Project 2" />
           </div>
           <div class="project-body">
             <h3>Heart Disease Prediction Through Machine Learning using A Facial Video</h3>
             <p>Technologies used: Python, OpenCV, scikit-learn, Flask, HTML, CSS, JavaScript, NumPy, Pandas.</p>
             <div class="project-actions">
-              <a class="btn small ghost" href="https://github.com/ThouheedMd/Heart-Disease-Prediction-Using-Facial-Video" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn small ghost"
+                href="https://github.com/ThouheedMd/Heart-Disease-Prediction-Using-Facial-Video" target="_blank"
+                rel="noopener">GitHub</a>
             </div>
           </div>
         </article>
@@ -275,7 +360,7 @@
         <!-- Project Card 3 -->
         <article class="project-card glass reveal" data-category="ai">
           <div class="project-media">
-            <img src="/asserts/projects/Portfolio website.png" alt="Project 3" />
+            <img src="/asserts/projects/Portfolio_website.png" alt="Project 3" />
           </div>
           <div class="project-body">
             <h3>Portfolio Website</h3>
@@ -289,13 +374,14 @@
         <!-- Project Card 4 -->
         <article class="project-card glass reveal" data-category="web">
           <div class="project-media">
-            <img src="/asserts/projects/PayTm Clone.png" alt="Project 4" />
+            <img src="/asserts/projects/PayTm_Clone.png" alt="Project 4" />
           </div>
           <div class="project-body">
             <h3>Clone of Paytm</h3>
             <p>Technologies used: HTML & CSS</p>
             <div class="project-actions">
-              <a class="btn small ghost" href="https://github.com/ThouheedMd/paytm" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn small ghost" href="https://github.com/ThouheedMd/paytm" target="_blank"
+                rel="noopener">GitHub</a>
             </div>
           </div>
         </article>
@@ -308,57 +394,80 @@
 
       <div class="cert-grid" id="certGrid">
         <!-- Certificate Card 1 -->
-        <article class="cert-card project-like glass reveal" data-cert-link="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/">
-          <a class="cert-thumb-link" href="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/" target="_blank" rel="noopener">
-            <img class="cert-thumb-small" src="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg" alt="HTML5, CSS3 & JavaScript" />
+        <article class="cert-card project-like glass reveal"
+          data-cert-link="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/">
+          <a class="cert-thumb-link" href="https://www.udemy.com/certificate/UC-f82217a8-0997-422d-b012-de7111c4202e/"
+            target="_blank" rel="noopener">
+            <img class="cert-thumb-small zoom-img" src="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg"
+              alt="HTML5, CSS3 & JavaScript" data-full="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg"
+              data-title="HTML5, CSS3 &amp; JavaScript — Udemy" />
           </a>
           <div class="cert-body-compact">
             <h4>HTML5, CSS3 & JavaScript</h4>
             <p class="issuer">Udemy • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg" target="_blank" rel="noopener">View</a>
+              <a class="btn small" href="/asserts/certifications/HTML5 CSS3 and JavaScript.jpg" target="_blank"
+                rel="noopener">View</a>
             </div>
           </div>
         </article>
 
         <!-- Certificate Card 2 -->
-        <article class="cert-card project-like glass reveal" data-cert-link="https://www.udemy.com/certificate/UC-9806e559-a74a-4408-a662-0e077abe0d59/">
-          <a class="cert-thumb-link" href="https://www.udemy.com/certificate/UC-9806e559-a74a-4408-a662-0e077abe0d59/" target="_blank" rel="noopener">
-            <img class="cert-thumb-small" src="/asserts/certifications/GIT, GitLab, GitHub Fundamentals.jpg" alt="GIT, GitLab, GitHub Fundamentals for Software Developers" />
+        <article class="cert-card project-like glass reveal"
+          data-cert-link="https://www.udemy.com/certificate/UC-9806e559-a74a-4408-a662-0e077abe0d59/">
+          <a class="cert-thumb-link" href="https://www.udemy.com/certificate/UC-9806e559-a74a-4408-a662-0e077abe0d59/"
+            target="_blank" rel="noopener">
+            <img class="cert-thumb-small zoom-img" src="/asserts/certifications/GIT, GitLab, GitHub Fundamentals.jpg"
+              alt="GIT, GitLab, GitHub Fundamentals for Software Developers"
+              data-full="/asserts/certifications/GIT, GitLab, GitHub Fundamentals.jpg"
+              data-title="GIT, GitLab, GitHub Fundamentals — Udemy" />
           </a>
           <div class="cert-body-compact">
             <h4>GIT, GitLab, GitHub Fundamentals for Software Developers</h4>
             <p class="issuer">Udemy • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/GIT, GitLab, GitHub Fundamentals.jpg" target="_blank" rel="noopener">View</a>
+              <a class="btn small" href="/asserts/certifications/GIT, GitLab, GitHub Fundamentals.jpg" target="_blank"
+                rel="noopener">View</a>
             </div>
           </div>
         </article>
-        
+
         <!-- Certificate Card 3 -->
-        <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-frontend-performance">
-          <a class="cert-thumb-link" href="https://example.com/certificate-frontend-performance" target="_blank" rel="noopener">
-            <img class="cert-thumb-small" src="/asserts/certifications/Institute of Management,Technology & Finance.jpg" alt="GIT, GitLab, GitHub Fundamentals for Software Developers" />
+        <article class="cert-card project-like glass reveal"
+          data-cert-link="https://example.com/certificate-frontend-performance">
+          <a class="cert-thumb-link" href="https://example.com/certificate-frontend-performance" target="_blank"
+            rel="noopener">
+            <img class="cert-thumb-small zoom-img"
+              src="/asserts/certifications/Institute of Management,Technology & Finance.jpg"
+              alt="GIT, GitLab, GitHub Fundamentals for Software Developers"
+              data-full="/asserts/certifications/Institute of Management,Technology & Finance.jpg"
+              data-title="GIT, GitLab, GitHub Fundamentals — MTF" />
           </a>
           <div class="cert-body-compact">
             <h4>GIT, GitLab, GitHub Fundamentals for Software Developers</h4>
             <p class="issuer">Institute of Management,Technology & Finance • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/Institute of Management,Technology & Finance.jpg" target="_blank" rel="noopener">View</a>
+              <a class="btn small" href="/asserts/certifications/Institute of Management,Technology & Finance.jpg"
+                target="_blank" rel="noopener">View</a>
             </div>
           </div>
         </article>
 
         <!-- Certificate Card 4 -->
-        <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-advanced-js">
+        <article class="cert-card project-like glass reveal"
+          data-cert-link="https://example.com/certificate-advanced-js">
           <a class="cert-thumb-link" href="https://example.com/certificate-advanced-js" target="_blank" rel="noopener">
-            <img class="cert-thumb-small" src="/asserts/certifications/Introduction to Python_certificate.jpg.jpeg" alt="Introduction to Python" />
+            <img class="cert-thumb-small zoom-img"
+              src="/asserts/certifications/Introduction to Python_certificate.jpg.jpeg" alt="Introduction to Python"
+              data-full="/asserts/certifications/Introduction to Python_certificate.jpg.jpeg"
+              data-title="Introduction to Python — Sololearn" />
           </a>
           <div class="cert-body-compact">
             <h4>Introduction to Python</h4>
             <p class="issuer">Sololearn • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/Introduction to Python_certificate.jpg.jpeg" target="_blank" rel="noopener">View</a>
+              <a class="btn small" href="/asserts/certifications/Introduction to Python_certificate.jpg.jpeg"
+                target="_blank" rel="noopener">View</a>
             </div>
           </div>
         </article>
@@ -366,13 +475,17 @@
         <!-- Certificate Card 5 -->
         <article class="cert-card project-like glass reveal" data-cert-link="https://example.com/certificate-ui-design">
           <a class="cert-thumb-link" href="https://example.com/certificate-ui-design" target="_blank" rel="noopener">
-            <img class="cert-thumb-small" src="/asserts/certifications/Python Intermediate_certificate.jpg.jpeg" alt="Python Intermediate" />
+            <img class="cert-thumb-small zoom-img"
+              src="/asserts/certifications/Python Intermediate_certificate.jpg.jpeg" alt="Python Intermediate"
+              data-full="/asserts/certifications/Python Intermediate_certificate.jpg.jpeg"
+              data-title="Python Intermediate — Sololearn" />
           </a>
           <div class="cert-body-compact">
             <h4>Python Intermediate</h4>
             <p class="issuer">Sololearn • 2026</p>
             <div class="cert-actions">
-              <a class="btn small" href="/asserts/certifications/Python Intermediate_certificate.jpg.jpeg" target="_blank" rel="noopener">View</a>
+              <a class="btn small" href="/asserts/certifications/Python Intermediate_certificate.jpg.jpeg"
+                target="_blank" rel="noopener">View</a>
             </div>
           </div>
         </article>
@@ -390,7 +503,8 @@
           <!-- Social links -->
           <div class="socials">
             <a class="social" href="https://github.com/ThouheedMd" target="_blank" aria-label="GitHub">GitHub</a>
-            <a class="social" href="https://www.linkedin.com/in/thouheed-mohammed" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a class="social" href="https://www.linkedin.com/in/thouheed-mohammed" target="_blank"
+              aria-label="LinkedIn">LinkedIn</a>
             <a class="social" href="https://thouheedmd1234@gmail.com" target="_blank" aria-label="Gmail">Gmail</a>
           </div>
         </div>
@@ -411,7 +525,8 @@
 
             <div class="form-row">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
               <small class="error" id="messageError"></small>
             </div>
 

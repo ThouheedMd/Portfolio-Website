@@ -458,7 +458,7 @@ initParticleCanvas();
    ========================= */
 function initRipples() {
   $$('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -467,7 +467,7 @@ function initRipples() {
       ripple.style.cssText = `
         position:absolute;
         width:${size}px;height:${size}px;
-        left:${x - size/2}px;top:${y - size/2}px;
+        left:${x - size / 2}px;top:${y - size / 2}px;
         border-radius:50%;
         background:rgba(255,255,255,0.15);
         transform:scale(0);
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =========================
-   FORM VALIDATION & SUBMIT
+   FORM VALIDATION & EMAILJS SUBMIT
    ========================= */
 const contactForm = $('#contactForm');
 const nameInput = $('#name');
@@ -545,48 +545,63 @@ const nameError = $('#nameError');
 const emailError = $('#emailError');
 const messageError = $('#messageError');
 const formSuccess = $('#formSuccess');
+const formError = $('#formError');
+const submitBtn = $('#submitBtn');
+const submitText = $('#submitText');
+const submitSpinner = $('#submitSpinner');
+
+// #CUSTOMIZE: Replace with your EmailJS Service ID and Template ID
+const EMAILJS_SERVICE_ID = 'service_mnlq8cv';
+const EMAILJS_TEMPLATE_ID = 'template_jyrt60k';
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-contactForm?.addEventListener('submit', (e) => {
+function setLoading(loading) {
+  if (!submitBtn) return;
+  submitBtn.disabled = loading;
+  submitBtn.style.opacity = loading ? '0.75' : '1';
+  submitText.textContent = loading ? 'Sending…' : 'Send Message';
+  submitSpinner.style.display = loading ? 'inline-block' : 'none';
+}
+
+contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  // Clear previous feedback
+  [nameError, emailError, messageError].forEach(el => { if (el) el.textContent = ''; });
+  if (formSuccess) formSuccess.textContent = '';
+  if (formError) formError.textContent = '';
+
+  // Validate
   let valid = true;
-  if (!nameInput.value.trim()) {
+  if (!nameInput?.value.trim()) {
     nameError.textContent = 'Please enter your name.';
     valid = false;
-  } else { nameError.textContent = ''; }
-
-  if (!validateEmail(emailInput.value.trim())) {
+  }
+  if (!validateEmail(emailInput?.value.trim())) {
     emailError.textContent = 'Please enter a valid email.';
     valid = false;
-  } else { emailError.textContent = ''; }
-
-  if (messageInput.value.trim().length < 10) {
-    messageError.textContent = 'Message should be at least 10 characters.';
+  }
+  if (messageInput?.value.trim().length < 10) {
+    messageError.textContent = 'Message must be at least 10 characters.';
     valid = false;
-  } else { messageError.textContent = ''; }
-
+  }
   if (!valid) return;
 
-  const submitBtn = contactForm.querySelector('[type=submit]');
-  if (submitBtn) {
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
-  }
-  formSuccess.textContent = '';
+  setLoading(true);
 
-  setTimeout(() => {
-    formSuccess.textContent = '✓ Message sent! I\'ll get back to you soon.';
+  try {
+    await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
+    formSuccess.textContent = '✓ Message sent! I\'ll get back to you within 48 hours.';
     contactForm.reset();
-    if (submitBtn) {
-      submitBtn.textContent = 'Send Message';
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = '1';
-    }
-  }, 1200);
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    formError.textContent = '✗ Failed to send. Please email me directly at thouheedmd1234@gmail.com';
+  } finally {
+    setLoading(false);
+  }
 });
 
 /* =========================
@@ -711,7 +726,7 @@ if (reduceMotion.matches) {
    (for internship certs & certification thumbnails)
    ========================= */
 function initImageModal() {
-  const modal    = document.getElementById('imgModal');
+  const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('imgModalImg');
   const modalTitle = document.getElementById('imgModalTitle');
   const closeBtn = document.getElementById('imgModalClose');
@@ -731,7 +746,7 @@ function initImageModal() {
     e.preventDefault();
     e.stopPropagation();
 
-    const src   = imgEl.getAttribute('data-full') || imgEl.getAttribute('src');
+    const src = imgEl.getAttribute('data-full') || imgEl.getAttribute('src');
     const title = imgEl.getAttribute('data-title') || '';
 
     modalImg.src = src;

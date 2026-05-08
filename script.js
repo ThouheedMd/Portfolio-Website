@@ -706,3 +706,81 @@ if (reduceMotion.matches) {
     el.classList.add('visible');
   });
 }
+/* =========================
+   IMAGE LIGHTBOX MODAL
+   (for internship certs & certification thumbnails)
+   ========================= */
+function initImageModal() {
+  const modal    = document.getElementById('imgModal');
+  const modalImg = document.getElementById('imgModalImg');
+  const modalTitle = document.getElementById('imgModalTitle');
+  const closeBtn = document.getElementById('imgModalClose');
+  const backdrop = modal ? modal.querySelector('.img-modal-backdrop') : null;
+
+  if (!modal) return;
+
+  // Open modal on .zoom-img click
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('.zoom-img, .intern-cert-thumb-wrap');
+    if (!target) return;
+
+    // Prevent default link navigation for cert thumbnails
+    const imgEl = target.tagName === 'IMG' ? target : target.querySelector('.zoom-img');
+    if (!imgEl) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const src   = imgEl.getAttribute('data-full') || imgEl.getAttribute('src');
+    const title = imgEl.getAttribute('data-title') || '';
+
+    modalImg.src = src;
+    modalImg.alt = title;
+    modalTitle.textContent = title;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close on backdrop click
+  backdrop?.addEventListener('click', closeModal);
+
+  // Close on X button
+  closeBtn?.addEventListener('click', closeModal);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    // Reset src after animation
+    setTimeout(() => {
+      modalImg.src = '';
+      modalTitle.textContent = '';
+    }, 300);
+  }
+}
+document.addEventListener('DOMContentLoaded', initImageModal);
+
+/* =========================
+   INTERNSHIP CARD 3D TILT
+   ========================= */
+document.addEventListener('DOMContentLoaded', () => {
+  $$('.internship-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotX = ((y - cy) / cy) * 4;
+      const rotY = ((x - cx) / cx) * -4;
+      card.style.transform = `translateY(-12px) perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+});

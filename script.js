@@ -551,8 +551,8 @@ const submitText = $('#submitText');
 const submitSpinner = $('#submitSpinner');
 
 // #CUSTOMIZE: Replace with your EmailJS Service ID and Template ID
-const EMAILJS_SERVICE_ID = 'service_mnlq8cv';
-const EMAILJS_TEMPLATE_ID = 'template_jyrt60k';
+const EMAILJS_SERVICE_ID = 'service_ltdczxw';
+const EMAILJS_TEMPLATE_ID = 'template_9sqr3on';
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
